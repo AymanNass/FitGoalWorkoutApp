@@ -15,7 +15,6 @@ export default MainStackScreens = () => {
         activeTintColor: "#FF2D55",
         inactiveTintColor: "#48484A",
         labelStyle: {
-            fontFamily: 'Verdana',
             fontSize: 12,
         },
         showLabel: true,

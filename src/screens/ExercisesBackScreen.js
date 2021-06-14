@@ -6,7 +6,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { StatusBar } from "expo-status-bar";
 import Text from '../components/Text'
 
-export default function Exercises({ navigation }) {
+export default function ExercisesBack({ navigation }) {
 
   return (
     <View style={styles.container}>
@@ -19,12 +19,17 @@ export default function Exercises({ navigation }) {
           <MarkerLeft text={'femorali'} onPress={() => navigation.navigate("ExercisesListScreen", { muscle: 'Femorali', })} top={'62%'} left={'60%'} />
           <MarkerRight text={'polpacci'} onPress={() => navigation.navigate("ExercisesListScreen", { muscle: 'Polpacci', })} top={'78%'} left={'2%'} />
         </ImageBackground>
-        <MaterialCommunityIcons
-          onPress={() => navigation.navigate("Exercises", { size: 'Peso', })}
-          name={"rotate-right"}
-          size={50}
-          color={"#FF2D55"} />
+        <View style={styles.body}>
+
+          <MaterialCommunityIcons
+            onPress={() => navigation.navigate("Exercises", { size: 'Peso', })}
+            name={"rotate-left"}
+            size={30}
+            color={"#007AFF"} />
+          <Text small light>Ruota</Text>
+        </View>
       </View>
+
     </View>
   )
 }
@@ -41,4 +46,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-

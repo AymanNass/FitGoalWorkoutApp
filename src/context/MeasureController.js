@@ -36,21 +36,4 @@ export async function getMeasures(measureRetrived, part) {
 
 
 
-export async function updateDanceMove(dance, updateComplete) {
-    firebase.
-        firestore().
-        collection("DanceMoves").
-        doc(dance.id).
-        set(dance).then(() => updateComplete(dance)).
-        catch((error) => console.log(error))
-}
 
-export async function deleteDanceMove(dance, deleteComplete) {
-    firebase.
-        firestore().
-        collection("DanceMoves").
-        doc(dance.id).
-        delete().
-        then(() => deleteComplete()).
-        catch((error) => console.log(error))
-}

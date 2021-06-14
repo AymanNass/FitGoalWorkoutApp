@@ -21,9 +21,9 @@ export default function MisureScreen({ navigation }) {
                 <StatsContainer>
                     <MaterialCommunityIcons
                         onPress={() => navigation.navigate("Aggiungi", { size: 'Peso', })}
-                        name={"plus-circle-outline"}
+                        name={"plus"}
                         size={30}
-                        color={"#F15152"} />
+                        color={"#007AFF"} />
                     <StatContainer>
                         <View style={{ marginLeft: 10 }}>
                             <Text large light>
@@ -38,7 +38,7 @@ export default function MisureScreen({ navigation }) {
                         <View style={{ padding: 0, flexDirection: "row" }}>
 
                             <TouchableOpacity
-                                onPress={() => navigation.navigate("Statistiche", { size: 'Peso', unity: 'Kg', })}
+                                onPress={() => navigation.navigate("Statistiche", { size: 'Peso' })}
                                 style={styles.button}
                             >
                                 <Text style={{ color: "#F15152" }}> Diario </Text>
@@ -53,9 +53,9 @@ export default function MisureScreen({ navigation }) {
                 <StatsContainer>
                     <MaterialCommunityIcons
                         onPress={() => navigation.navigate("Aggiungi", { size: 'Altezza', })}
-                        name={"plus-circle-outline"}
+                        name={"plus"}
                         size={30}
-                        color={"#F15152"} />
+                        color={"#007AFF"} />
                     <StatContainer>
                         <View style={{ marginLeft: 10 }}>
                             <Text large light>
@@ -69,7 +69,7 @@ export default function MisureScreen({ navigation }) {
                         <View style={{ padding: 0, flexDirection: "row" }}>
 
                             <TouchableOpacity
-                                onPress={() => navigation.navigate("Statistiche", { size: 'Altezza', unity: 'cm' })}
+                                onPress={() => navigation.navigate("Statistiche", { size: 'Altezza' })}
                                 style={styles.button}
                             >
                                 <Text style={{ color: "#F15152" }}> Diario </Text>
@@ -84,9 +84,9 @@ export default function MisureScreen({ navigation }) {
                 <StatsContainer>
                     <MaterialCommunityIcons
                         onPress={() => navigation.navigate("Aggiungi", { size: 'Petto', })}
-                        name={"plus-circle-outline"}
+                        name={"plus"}
                         size={30}
-                        color={"#F15152"} />
+                        color={"#007AFF"} />
                     <StatContainer>
                         <View style={{ marginLeft: 10 }}>
                             <Text large light>
@@ -100,7 +100,7 @@ export default function MisureScreen({ navigation }) {
                         <View style={{ padding: 0, flexDirection: "row" }}>
 
                             <TouchableOpacity
-                                onPress={() => navigation.navigate("Statistiche", { size: 'Petto', unity: 'cm' })}
+                                onPress={() => navigation.navigate("Statistiche", { size: 'Petto' })}
                                 style={styles.button}
                             >
                                 <Text style={{ color: "#F15152" }}> Diario </Text>
@@ -113,9 +113,9 @@ export default function MisureScreen({ navigation }) {
                 <StatsContainer>
                     <MaterialCommunityIcons
                         onPress={() => navigation.navigate("Aggiungi", { size: 'Vita', })}
-                        name={"plus-circle-outline"}
+                        name={"plus"}
                         size={30}
-                        color={"#F15152"} />
+                        color={"#007AFF"} />
 
                     <StatContainer>
                         <View style={{ marginLeft: 10 }}>
@@ -130,7 +130,7 @@ export default function MisureScreen({ navigation }) {
                         <View style={{ padding: 0, flexDirection: "row" }}>
 
                             <TouchableOpacity
-                                onPress={() => navigation.navigate("Statistiche", { size: 'Vita', unity: 'cm' })}
+                                onPress={() => navigation.navigate("Statistiche", { size: 'Vita' })}
                                 style={styles.button}
                             >
                                 <Text style={{ color: "#F15152" }}> Diario </Text>
@@ -144,9 +144,9 @@ export default function MisureScreen({ navigation }) {
                 <StatsContainer>
                     <MaterialCommunityIcons
                         onPress={() => navigation.navigate("Aggiungi", { size: 'Bicipitesx', })}
-                        name={"plus-circle-outline"}
+                        name={"plus"}
                         size={30}
-                        color={"#F15152"} />
+                        color={"#007AFF"} />
 
                     <StatContainer>
                         <View style={{ marginLeft: 10 }}>
@@ -161,7 +161,7 @@ export default function MisureScreen({ navigation }) {
                         <View style={{ padding: 0, flexDirection: "row" }}>
 
                             <TouchableOpacity
-                                onPress={() => navigation.navigate("Statistiche", { size: 'Bicipitesx', unity: 'cm' })}
+                                onPress={() => navigation.navigate("Statistiche", { size: 'Bicipitesx' })}
                                 style={styles.button}
                             >
                                 <Text style={{ color: "#F15152" }}> Diario </Text>
@@ -175,9 +175,9 @@ export default function MisureScreen({ navigation }) {
                 <StatsContainer>
                     <MaterialCommunityIcons
                         onPress={() => navigation.navigate("Aggiungi", { size: 'Bicipitedx', })}
-                        name={"plus-circle-outline"}
+                        name={"plus"}
                         size={30}
-                        color={"#F15152"} />
+                        color={"#007AFF"} />
 
                     <StatContainer>
                         <View style={{ marginLeft: 10 }}>
@@ -192,7 +192,7 @@ export default function MisureScreen({ navigation }) {
                         <View style={{ padding: 0, flexDirection: "row" }}>
 
                             <TouchableOpacity
-                                onPress={() => navigation.navigate("Statistiche", { size: 'Bicipitedx', unity: 'cm' })}
+                                onPress={() => navigation.navigate("Statistiche", { size: 'Bicipitedx' })}
                                 style={styles.button}
                             >
                                 <Text style={{ color: "#F15152" }}> Diario </Text>
@@ -206,9 +206,9 @@ export default function MisureScreen({ navigation }) {
                 <StatsContainer>
                     <MaterialCommunityIcons
                         onPress={() => navigation.navigate("Aggiungi", { size: 'GambaSx', })}
-                        name={"plus-circle-outline"}
+                        name={"plus"}
                         size={30}
-                        color={"#F15152"} />
+                        color={"#007AFF"} />
 
                     <StatContainer>
                         <View style={{ marginLeft: 10 }}><Text large light>
@@ -221,7 +221,7 @@ export default function MisureScreen({ navigation }) {
                         <View style={{ padding: 0, flexDirection: "row" }}>
 
                             <TouchableOpacity
-                                onPress={() => navigation.navigate("Statistiche", { size: 'GambaSx', unity: 'cm' })}
+                                onPress={() => navigation.navigate("Statistiche", { size: 'GambaSx' })}
                                 style={styles.button}
                             >
                                 <Text style={{ color: "#F15152" }}> Diario </Text>
@@ -234,9 +234,9 @@ export default function MisureScreen({ navigation }) {
                 <StatsContainer>
                     <MaterialCommunityIcons
                         onPress={() => navigation.navigate("Aggiungi", { size: 'GambaDx', })}
-                        name={"plus-circle-outline"}
+                        name={"plus"}
                         size={30}
-                        color={"#F15152"} />
+                        color={"#007AFF"} />
 
                     <StatContainer>
                         <View style={{ marginLeft: 10 }}><Text large light>
@@ -246,7 +246,7 @@ export default function MisureScreen({ navigation }) {
                     <StatContainer>
                         <View style={{ padding: 0, flexDirection: "row" }}>
                             <TouchableOpacity
-                                onPress={() => navigation.navigate("Statistiche", { size: 'GambaDx', unity: 'cm', })}
+                                onPress={() => navigation.navigate("Statistiche", { size: 'GambaDx' })}
                                 style={styles.button}
                             >
                                 <Text style={{ color: "#F15152" }}> Diario </Text>

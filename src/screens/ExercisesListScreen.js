@@ -3,12 +3,11 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Image, TouchableOpacity, FlatList } from 'react-native';
 import { getExercises } from '../context/WorkoutController'
-import Text from '../components/Text'
-import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { StatusBar } from "expo-status-bar";
 import { Card, CardTitle, CardContent, CardAction, CardButton, CardImage } from 'react-native-material-cards'
+import ignoreWarnings from 'react-native-ignore-warnings';
 
-export default function StatsScreen({ navigation, route }) {
+export default function ExercisesList({ navigation, route }) {
 
     const [ExercisesList, setExercisesList] = useState()
     useEffect(() => {

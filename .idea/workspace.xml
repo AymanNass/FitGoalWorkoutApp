@@ -2,9 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="944f9759-5398-4c6e-837e-d315e7b09b92" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/logo-blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/logo-blue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/react-native-linear-gradient/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-native-linear-gradient/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/react-native-maps/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/react-native-maps/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/react-native-maps/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/ExercisesController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/Listitem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/Listitem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/WorkoutController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/WorkoutController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/AddMeasure.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AddMeasure.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/ExerciseDetailsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ExerciseDetailsScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/ExercisesBackScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ExercisesBackScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/ExercisesListScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ExercisesListScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/ExercisesScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ExercisesScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/MapPoints.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/MapPoints.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/MeasurementsScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/MisureScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/MisureScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/MyWorkout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/PlayWorkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/PlayWorkout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/Profile2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/ProfileScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ProfileScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/SignInScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/SignInScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/Signup2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/StatsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/StatsScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/TestScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/WorkoutScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/WorkoutScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/bozza" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/bozza" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stacks/CustomNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stacks/CustomNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stacks/MainStackScreens.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stacks/MainStackScreens.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +68,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="144" y="125" width="1096" height="616" key="AVDManager" timestamp="1620237497340">
-      <screen x="0" y="25" width="1440" height="816" />
+    <state x="144" y="125" width="1096" height="616" key="AVDManager" timestamp="1623017333486">
+      <screen x="0" y="25" width="1440" height="814" />
     </state>
+    <state x="144" y="125" width="1096" height="616" key="AVDManager/0.25.1440.814@0.25.1440.814" timestamp="1623017333486" />
     <state x="144" y="125" width="1096" height="616" key="AVDManager/0.25.1440.816@0.25.1440.816" timestamp="1620237497340" />
   </component>
 </project>

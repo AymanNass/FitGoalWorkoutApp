@@ -4,12 +4,10 @@ import React, { useState, useEffect, Component } from 'react';
 import { StyleSheet, View, Image, TouchableOpacity, FlatList } from 'react-native';
 import { getExercises } from '../context/WorkoutController'
 import Text from '../components/Text'
-import TodoList from "../components/ExercisesList";
 import { StatusBar } from "expo-status-bar";
-import { Card, CardTitle, CardContent, CardAction, CardButton, CardImage } from 'react-native-material-cards'
-import { ImageBackground } from 'react-native';
+import ignoreWarnings from 'react-native-ignore-warnings';
 
-export default function StatsScreen({ navigation, route, Component }) {
+export default function ExerciseDetails({ navigation, route, Component }) {
 
 
     const [ExercisesList, setExercisesList] = useState()

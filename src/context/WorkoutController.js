@@ -2,6 +2,7 @@ import firebase from 'firebase'
 import "firebase/auth"
 import "firebase/firestore"
 
+
 //Prende gli esercizi per la schermata parti del corpo (ExercisesListScreen)
 export async function getExercises(ExercisesRetrived) {
     var exercisesList = []
@@ -17,20 +18,7 @@ export async function getExercises(ExercisesRetrived) {
     ExercisesRetrived(exercisesList)
 }
 
-export function addWorkoutExercise(exercise, addComplete) {
-    firebase
-        .firestore()
-        .collection("Schedules")
-        .doc("kDblQx86UJMxoIkXwaCi")
-        .collection("Exercises")
-        .add(exercise)
-        .then((snapshot) => {
-            exercise.id = snapshot.id
-            snapshot.set(exercise)
-        })
-        .then(() => addComplete(exercise))
-        .catch((error) => console.log(error))
-}
+
 
 export function addWorkout(routine, addComplete) {
     firebase
@@ -47,27 +35,9 @@ export function addWorkout(routine, addComplete) {
         .catch((error) => console.log(error))
 }
 
-export async function getWorkout(measureRetrived) {
-    var measureList = []
-    var snapshot = await firebase
-        .firestore()
-        .collection("Schedules")
-        .doc(firebase.auth().currentUser.uid)
-        .collection("Routines")
-        .doc("A")
-        .collection("Lunedì")
-        .doc("suQX51NNU9KP78aqZoIe")
-        .get()
-    snapshot.forEach((doc) => {
-        const measureDoc = doc.data()
-        measureDoc.id = doc.id
-        measureList.push(measureDoc)
-    })
-    measureRetrived(measureList)
-}
 
 //Prende gli esercizi nel workout
-export async function getWorkoutSchedule(WorkoutRetrived, workoutid) {
+export async function getWorkoutSchedule(WorkoutRetrived, workoutid, number) {
     var workoutList = []
     var snapshot = await firebase
         .firestore()
@@ -75,6 +45,7 @@ export async function getWorkoutSchedule(WorkoutRetrived, workoutid) {
         .doc(workoutid)
         .collection("Exercises")
         .get()
+
     snapshot.forEach((doc) => {
         const workoutDoc = doc.data()
         workoutDoc.id = doc.id
@@ -90,7 +61,6 @@ export async function getWorkoutScheduleName(WorkoutNameRetrived) {
     var snapshot = await firebase
         .firestore()
         .collection("Schedules")
-
         .get()
     snapshot.forEach((doc) => {
         const workoutNameDoc = doc.data()
@@ -99,4 +69,22 @@ export async function getWorkoutScheduleName(WorkoutNameRetrived) {
     })
     WorkoutNameRetrived(workoutNameList)
 }
+
+export async function getFavourites(FavRetrived) {
+    var FavList = []
+    var snapshot = await firebase
+        .firestore()
+        .collection("Favourites")
+        .doc(firebase.auth().currentUser.uid)
+        .collection("userFavourites")
+        .get()
+    snapshot.forEach((doc) => {
+        const favDoc = doc.data()
+        favDoc.id = doc.id
+        FavList.push(favDoc)
+    })
+    FavRetrived(FavList)
+}
+
+
 

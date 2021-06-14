@@ -5,8 +5,8 @@ import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view
 import firebase from 'firebase'
 import "firebase/auth"
 import "firebase/firestore"
-import styled from 'styled-components'
 import Text from '../components/Text'
+import ignoreWarnings from 'react-native-ignore-warnings';
 
 export default function AddMeasurePage({ navigation, route }) {
 
@@ -27,7 +27,7 @@ export default function AddMeasurePage({ navigation, route }) {
   }
 
   function addComplete() {
-    navigation.navigate("Misure")
+    navigation.push("Statistiche", { size: route.params.size })
   }
 
 
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     width: 100,
     height: 30,
-    borderColor: '#F15152',
+    borderColor: '#007AFF',
     borderWidth: 1
   },
   button2: {
@@ -108,9 +108,9 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     width: 100,
     height: 30,
-    borderColor: '#F15152',
+    borderColor: '#007AFF',
     borderWidth: 1,
-    backgroundColor: '#F15152',
+    backgroundColor: '#007AFF',
 
   },
 

@@ -1,16 +1,20 @@
 import React from 'react'
+import { Button, View, FlatList, TouchableOpacity, TextInput } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack'
 import ExercisesScreen from '../screens/ExercisesScreen'
 import ExercisesListScreen from '../screens/ExercisesListScreen'
 import StatsScreen from '../screens/StatsScreen'
 import ExercisesBackScreen from '../screens/ExercisesBackScreen'
 import Workout from '../screens/WorkoutScreen'
-import MyWorkout from '../screens/MyWorkout'
 import Measurements from '../screens/MisureScreen'
 import Aggiungi from '../screens/AddMeasure'
 import PlayWorkout from '../screens/PlayWorkout'
 import ExerciseDetailsScreen from '../screens/ExerciseDetailsScreen'
 import ExerciseList from '../components/ExercisesList'
+import WorkoutAssistant from '../screens/WorkoutAssistant'
+import ExercisesExecutionScreen from '../screens/ExercisesExecutionScreen'
+
+import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 const Stack = createStackNavigator()
 
@@ -30,6 +34,7 @@ const FirstScreenNavigator = () => {
                     animationEnabled: false,
                     title: 'Esercizi',
                     headerLeft: null
+
                 }}
             />
             <Stack.Screen
@@ -86,7 +91,7 @@ const FirstScreenNavigator = () => {
         </Stack.Navigator>
     )
 }
-const MeasurementsScreenNavigator = () => {
+const MeasurementsScreenNavigator = ({ navigation }) => {
     return (
 
         <Stack.Navigator
@@ -100,76 +105,125 @@ const MeasurementsScreenNavigator = () => {
                 component={Measurements}
                 options={{
                     headerShown: false,
-                    animationEnabled: true,
+                    animationEnabled: false,
                     title: '',
 
                 }}
+
             />
             <Stack.Screen
                 name="Aggiungi"
                 component={Aggiungi}
                 options={{
                     headerShown: true,
-                    animationEnabled: true,
+                    animationEnabled: false,
                     title: '',
+                    headerLeft: () => (
+                        <TouchableOpacity
+                            onPress={() => navigation.push("Misure")}
+                        >
+                            <MaterialCommunityIcons style={{ paddingLeft: 10 }} name="arrow-left" size={26} color="black" />
+                        </TouchableOpacity>)
 
                 }}
+
             />
             <Stack.Screen
                 name="Statistiche"
                 component={StatsScreen}
+
                 options={{
                     headerShown: true,
-                    animationEnabled: true,
+                    animationEnabled: false,
                     title: '',
-
+                    headerLeft: () => (
+                        <TouchableOpacity
+                            onPress={() => navigation.push("Misure")}
+                        >
+                            <MaterialCommunityIcons style={{ paddingLeft: 10 }} name="arrow-left" size={26} color="black" />
+                        </TouchableOpacity>)
                 }}
+
             />
 
         </Stack.Navigator>
     )
 }
 
-const WorkoutScreenNavigator = () => {
+const WorkoutScreenNavigator = ({ navigation }) => {
     return (
 
         <Stack.Navigator
             screenOptions={{
-                headerTintColor: '#F15152',
-                headerStyle: { backgroundColor: '#34344A' },
-                backgroundColor: '#34344A',
-                headerShown: false
+                headerTintColor: '#FF2D55',
+                headerStyle: { backgroundColor: '#F2F2F7' },
 
             }}>
+
             <Stack.Screen
                 name="Workout"
                 component={Workout}
-                screenOptions={{
-                    headerTintColor: '#F15152',
-                    headerStyle: { backgroundColor: '#34344A' },
-                    backgroundColor: '#34344A',
-                    headerShown: false
+                options={{
+                    headerShown: false,
+                    title: '',
+                    gestureEnabled: false
                 }}
 
+
             />
+
             <Stack.Screen
-                name="MyWorkout"
-                component={MyWorkout}
-                screenOptions={{
-                    headerTintColor: '#F15152',
-                    headerStyle: { backgroundColor: '#34344A' },
-                    backgroundColor: '#34344A',
-                    headerShown: false
+                name="WorkoutAssistant"
+                component={WorkoutAssistant}
+
+                options={{
+                    headerShown: false,
+                    title: 'Start',
+                    gestureEnabled: false,
+                    headerLeft: () => (
+                        <TouchableOpacity
+                            onPress={() => navigation.push("Workout")}
+                        >
+                            <MaterialCommunityIcons style={{ paddingLeft: 10 }} name="arrow-left" size={26} color="black" />
+                        </TouchableOpacity>
+                    ),
+
                 }}
             />
             <Stack.Screen
                 name="PlayWorkout"
                 component={PlayWorkout}
-                screenOptions={{
-                    headerTintColor: '#F15152',
-                    headerStyle: { backgroundColor: '#34344A' },
-                    backgroundColor: '#34344A',
-                    headerShown: false
+                options={{
+                    headerShown: true,
+                    title: '',
+                    gestureEnabled: false,
+                    headerLeft: () => (
+                        <TouchableOpacity
+                            onPress={() => navigation.push("Workout")}
+                        >
+                            <MaterialCommunityIcons style={{ paddingLeft: 10 }} name="arrow-left" size={26} color="black" />
+                        </TouchableOpacity>
+                    ),
+
+                }}
+
+            />
+            <Stack.Screen
+                name="ExercisesExecutionScreen"
+                component={ExercisesExecutionScreen}
+                options={{
+                    headerShown: true,
+                    animationEnabled: false,
+                    headerTintColor: 'white',
+                    title: '',
+                    headerBackTitle: 'Indietro',
+                    headerStyle: {
+                        backgroundColor: '#FF2D55',
+                        shadowRadius: 0,
+                        shadowOffset: {
+                            height: 0,
+                        },
+                    },
                 }}
             />
 

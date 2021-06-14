@@ -38,7 +38,7 @@ export default function ProfileScreen() {
             <Auth>
                 <Image
                     source={
-                        require('../../assets/Logo-grey.png')
+                        require('../../assets/logo-blue.png')
                     }
                     style={{ width: 175, height: 200 }}
                 />

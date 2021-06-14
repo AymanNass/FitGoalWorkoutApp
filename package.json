@@ -17,6 +17,7 @@
     "@react-navigation/stack": "5.14.4",
     "expo": "~41.0.1",
     "expo-image-picker": "~10.1.4",
+    "expo-linear-gradient": "~9.1.0",
     "expo-permissions": "~12.0.1",
     "expo-status-bar": "~1.0.4",
     "firebase": "8.2.3",
@@ -26,12 +27,15 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
     "react-native-animated-icons": "1.0.5",
     "react-native-bouncy-checkbox": "2.1.1",
+    "react-native-cardview": "2.0.5",
     "react-native-countdown-circle-timer": "2.5.3",
     "react-native-countdown-component": "2.7.1",
     "react-native-elements": "3.4.1",
     "react-native-gesture-handler": "~1.10.2",
     "react-native-google-maps-directions": "2.1.1",
     "react-native-iconic": "0.0.9",
+    "react-native-ignore-warnings": "0.1.1",
+    "react-native-image-gradient": "2.2.5",
     "react-native-imaged-carousel-card": "0.1.1",
     "react-native-keyboard-aware-scroll-view": "0.9.4",
     "react-native-linear-gradient": "2.5.6",
@@ -45,8 +49,7 @@
     "react-native-svg": "12.1.1",
     "react-native-web": "~0.13.12",
     "styled-components": "5.2.3",
-    "undefined": "react-native-vector-icons/Fontisto",
-    "expo-linear-gradient": "~9.1.0"
+    "undefined": "react-native-vector-icons/Fontisto"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0"

@@ -1,24 +1,24 @@
 
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, FlatList, TouchableOpacity, TextInput } from 'react-native';
-import { addWorkout, getWorkoutSchedule, getWorkoutScheduleName } from '../context/WorkoutController'
+import { getFavourites, getWorkoutScheduleName } from '../context/WorkoutController'
 import { StatusBar } from "expo-status-bar";
-import { Card, CardTitle, CardContent, CardAction, CardButton, CardImage } from 'react-native-material-cards'
 import firebase from 'firebase'
 import "firebase/auth"
 import "firebase/firestore"
 import styled from 'styled-components'
 import Text from '../components/Text'
 import ImagedCarouselCard from "react-native-imaged-carousel-card";
-import { ListItem } from 'react-native-elements/dist/list/ListItem';
 
 
-export default function AddMeasurePage({ navigation, route }) {
+export default function WorkoutScreen({ navigation, route }) {
   const [WorkoutList, setWorkoutList] = useState()
   const [FavList, setFavList] = useState()
+  const [IsFav, setIsFav] = useState()
 
   useEffect(() => {
     getData()
+    getDataFav()
   }, [])
 
   function getData() {
@@ -29,17 +29,22 @@ export default function AddMeasurePage({ navigation, route }) {
     setWorkoutList(WorkoutList)
   }
 
+  function getDataFav() {
+    getFavourites(FavRetrieved)
+  }
 
-
+  function FavRetrieved(FavList) {
+    setFavList(FavList)
+  }
 
   return (
 
     <Container>
       <TitleContainer>
-        <Text title light>Allenamenti</Text>
+        <Text title light>Workout</Text>
       </TitleContainer>
       <SectionContainer>
-        <Text medium bold>Preferiti</Text>
+        <Text medium bold color="#FF2D55">Preferiti</Text>
       </SectionContainer>
 
 
@@ -49,13 +54,15 @@ export default function AddMeasurePage({ navigation, route }) {
         horizontal={true}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) =>
-          <TouchableOpacity onPress={() => navigation.navigate("PlayWorkout", { name: item.name, id: item.id })}>
+          <TouchableOpacity onPress={() => navigation.push("PlayWorkout", { name: item.name, id: item.id, pic: item.pic, description: item.description })}>
             <CardContainer>
               <ImagedCarouselCard
                 width={200}
                 height={200}
-                shadowColor="#051934"
+                shadowColor="#FF2D55"
                 text={item.name}
+                overlayBorderBottomRightRadius={35}
+                overlayBorderBottomLeftRadius={35}
                 source={{
                   uri: item.pic,
                 }}
@@ -66,20 +73,22 @@ export default function AddMeasurePage({ navigation, route }) {
         }
       />
       <SectionContainer>
-        <Text medium bold>Workout</Text>
+        <Text medium bold color="#007AFF">Workout</Text>
       </SectionContainer>
       <FlatList style={styles.flatList}
         data={WorkoutList}
         horizontal={true}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) =>
-          <TouchableOpacity onPress={() => navigation.navigate("PlayWorkout", { name: item.name, id: item.id })}>
+          <TouchableOpacity onPress={() => navigation.push("PlayWorkout", { name: item.name, id: item.id, pic: item.pic, description: item.description })}>
             <CardContainer>
               <ImagedCarouselCard
                 width={200}
                 height={200}
-                shadowColor="#051934"
+                shadowColor="#007AFF"
                 text={item.name}
+                overlayBorderBottomRightRadius={35}
+                overlayBorderBottomLeftRadius={35}
                 source={{
                   uri: item.pic,
                 }}
@@ -89,13 +98,6 @@ export default function AddMeasurePage({ navigation, route }) {
           </TouchableOpacity>
         }
       />
-
-      <TouchableOpacity
-        onPress={() => navigation.navigate("MyWorkout")}
-        style={styles.button}
-      >
-        <Text style={{ color: "#F15152" }}> Aggiungi </Text>
-      </TouchableOpacity>
     </Container>
   );
 }
